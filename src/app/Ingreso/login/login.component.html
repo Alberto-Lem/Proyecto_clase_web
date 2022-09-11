@@ -1,11 +1,6 @@
 <div class="col">
-    <h3>Ingreso</h3>
-    <hr>
-    <form (submit)="ingresar()">
-        <input type="text" placeholder="Usuario">
-
-        <input type="text" placeholder="Contraseña">
-
-        <button type="submit">Ingresar</button>
-    </form>
+    <app-agregar (onNewUser)="agregarNuevousuario($event)"></app-agregar>
+</div>
+<div class="col">
+    <app-usuarios [usuarios]="usuarios"></app-usuarios>
 </div>

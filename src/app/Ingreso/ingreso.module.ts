@@ -1,17 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ContraseniaComponent } from './contrasenia/contrasenia.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
-interface{
-  usuario:String,
-  contraseña:String
-}
+import { AgregarComponent } from './agregar/agregar.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { IngresoService } from './service/ingreso.service';
+
 @NgModule({
     declarations: [
         ContraseniaComponent,
         LoginComponent,
-        RegistroComponent
+        RegistroComponent,
+        AgregarComponent,
+        UsuariosComponent
       ],
       exports: [
         ContraseniaComponent,
@@ -19,9 +22,10 @@ interface{
         RegistroComponent
       ],
       imports: [
-        CommonModule
+        CommonModule,
+        FormsModule
       ],
-      providers: [],
+      providers: [IngresoService],
       bootstrap: []
 })
 

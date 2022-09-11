@@ -1,0 +1,18 @@
+ <h3>Ingreso <small>{{login.usuario}}</small></h3>
+    <hr>
+    <form (ngSubmit)="ingresar()">
+        <input
+        type="text"
+        placeholder="Usuario"
+        name="usuario"
+        [(ngModel)]="login.usuario"
+        >
+
+        <input 
+        type="text"
+        placeholder="Contraseña"
+        name="password"
+        [(ngModel)]="login.password"
+        >
+        <button type="submit">Ingresar</button>
+    </form>
